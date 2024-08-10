@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 namespace POS_DBProj.Models
 {
     public class POS_TransactionHeader
@@ -18,10 +19,10 @@ namespace POS_DBProj.Models
         [Column(TypeName = "decimal")]
         public decimal VatAmount { get; set; }
         [Column(TypeName = "decimal")]
-        public decimal TotalAmount { get; set;}
+        public decimal TotalAmount { get; set; }
         public POS_Users POSUsers { get; set; }
         public long UserID { get; set; } // Foreign Key
-        [Column(TypeName = "bit")] 
+        [Column(TypeName = "bit")]
         public bool IsVoided { get; set; }
         public int TicketNumber { get; set; }
 

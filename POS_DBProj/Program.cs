@@ -1,4 +1,4 @@
-using POS_DBProj.Data;
+using POS_DBProj.Models.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

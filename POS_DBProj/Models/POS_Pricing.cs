@@ -5,7 +5,7 @@ namespace POS_DBProj.Models
     public class POS_Pricing
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
         public POS_Products POSProducts { get; set; }
         public long ProductID { get; set; }
         [StringLength(50)]

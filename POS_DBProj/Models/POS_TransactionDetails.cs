@@ -5,7 +5,7 @@ namespace POS_DBProj.Models
     public class POS_TransactionDetails
     {
         [Key]
-        public long pID { get; set; }
+        public long Id { get; set; }
         public POS_TransactionHeader POSTransactionHeader { get; set; }
         public long TransactionID { get; set; }
         public int ItemQuantity { get; set; }

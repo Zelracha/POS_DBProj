@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace POS_DBProj.Data
+namespace POS_DBProj.Models.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -29,27 +29,27 @@ namespace POS_DBProj.Data
             // Configure decimal precision and scale
             modelBuilder.Entity<POS_Pricing>()
                 .Property(p => p.ProductPrice)
-                .HasPrecision(18, 0);
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<POS_TransactionHeader>()
                 .Property(t => t.PriceBeforeTax)
-                .HasPrecision(18, 0);
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<POS_TransactionHeader>()
                 .Property(t => t.AmountTendered)
-                .HasPrecision(18, 0);
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<POS_TransactionHeader>()
                 .Property(t => t.VatAmount)
-                .HasPrecision(18, 0);
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<POS_TransactionHeader>()
                 .Property(t => t.TotalAmount)
-                .HasPrecision(18, 0);
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<POS_TransactionDetails>()
                .Property(d => d.ProductPrice)
-               .HasPrecision(18, 0);
+               .HasPrecision(18, 2);
 
             base.OnModelCreating(modelBuilder);
         }
